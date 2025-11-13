@@ -1,9 +1,11 @@
 import ParticleBackground from './components/ParticleBackground';
+import Header from './components/Header';
 import './style.css';
 
 function App() {
   return (
-    <div className='relative min-h-screen overflow-hidden'>
+    <div>
+      <Header />
       <ParticleBackground />
     </div>
   );
