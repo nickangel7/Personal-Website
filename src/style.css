@@ -1,13 +1,19 @@
 body {
-  background-color: rgb(14, 14, 14);
+  height: 100%;
+  overflow: hidden;
+  background-color: black;
+  color: #01f8f4ff;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   position: relative;
+  flex-direction: row;
   z-index: 10;
-  color: white;
+  color: #01f8f4ff;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
@@ -22,4 +28,34 @@ body {
   gap: 2rem;
   padding: 0;
   margin: 0;
+}
+
+.footer {
+  position: fixed;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  z-index: 12;
+  padding: 10px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footericons {
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
