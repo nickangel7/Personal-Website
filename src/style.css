@@ -7,6 +7,10 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  font-family: 'Orbitron', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .header {
@@ -14,10 +18,15 @@ body {
   flex-direction: row;
   z-index: 10;
   color: #01f8f4ff;
-  padding: 10px 20px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.logo {
+  width: clamp(10px, 20vw, 190px);
 }
 
 .header nav ul {
@@ -36,26 +45,50 @@ body {
   bottom: 0;
   left: 0;
   z-index: 12;
-  padding: 10px 20px;
+  padding-left: 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  font-size: clamp(0.8rem, 1vw, 2rem);
 }
 
 .footericons {
   display: flex;
   gap: 10px;
-  padding: 10px 20px;
-  margin-right: 20px;
+  padding: 5px 5px;
+  margin-right: 1px;
+  margin-bottom: 5px;
 }
 
 .introduction {
+  width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: clamp(1rem, 3vw, 5rem);
+}
+
+.section {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.introname {
+  background-color: #01f8f4ff;
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.playbutton {
+  width: clamp(10px, 8vw, 100px);
+}
+
+.logofooter {
+  width: 30%;
+  height: auto;
 }
