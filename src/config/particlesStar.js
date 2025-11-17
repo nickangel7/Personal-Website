@@ -19,35 +19,39 @@ const particleStar = {
       value: '#01f8f4ff',
     },
     links: {
-      blink: true,
-      color: {
-        value: '#01f8f4ff',
-      },
-      consent: false,
-      distance: 150,
-      enable: true,
-      opacity: 0.1,
-      shadow: {
-        blur: 1,
-        color: {
-          value: 'lime',
-        },
-        enable: false,
-      },
-      width: 5,
+      // blink: true,
+      // color: {
+      //   value: '#01f8f4ff',
+      // },
+      // consent: false,
+      // distance: 150,
+      // enable: true,
+      // opacity: 1,
+      // shadow: {
+      //   blur: 1,
+      //   color: {
+      //     value: 'lime',
+      //   },
+      //   enable: false,
+      // },
+      // width: 5,
     },
     move: {
       attract: {
-        enable: true,
+        enable: false,
         rotate: {
           x: 3000,
           y: 3000,
         },
       },
+      straight: true,
       direction: 'left',
       enable: true,
       outModes: 'out',
-      speed: 0.5,
+      speed: {
+        min: 1,
+        max: 2,
+      },
     },
     collisions: {
       enable: false,
@@ -56,7 +60,7 @@ const particleStar = {
       density: {
         enable: true,
       },
-      value: 200,
+      value: 250,
     },
     opacity: {
       animation: {
@@ -65,15 +69,15 @@ const particleStar = {
         sync: true,
       },
       value: {
-        min: 0.05,
-        max: 0.5,
+        min: 0.1,
+        max: 1,
       },
     },
     shape: {
       type: 'circle',
     },
     size: {
-      value: 2,
+      value: 1.5,
     },
   },
   pauseOnBlur: true,
