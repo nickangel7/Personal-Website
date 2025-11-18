@@ -1,4 +1,4 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 import '../style.css';
 import logo from './assets/honeybee.png';
 
@@ -9,16 +9,24 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a>Home</a>
+            <NavLink to='/' end className='nav-link'>
+              Home
+            </NavLink>
           </li>
           <li>
-            <a>Portfolio</a>
+            <NavLink to='/portfolio' className='nav-link'>
+              Portfolio
+            </NavLink>
           </li>
           <li>
-            <a>About Me</a>
+            <NavLink to='/about' className='nav-link'>
+              About Me
+            </NavLink>
           </li>
           <li>
-            <a>Contact</a>
+            <NavLink to='/contact' className='nav-link'>
+              Contact
+            </NavLink>
           </li>
         </ul>
       </nav>

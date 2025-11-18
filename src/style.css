@@ -39,6 +39,15 @@ body {
   margin: 0;
 }
 
+.nav-link {
+  color: #01f8f4ff;
+  text-decoration: none;
+}
+
+.nav-link[aria-current='page'] {
+  text-decoration: underline;
+}
+
 .footer {
   position: fixed;
   background-color: black;
@@ -75,6 +84,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.aboutme p {
+  width: 50%;
 }
 
 .introname {
