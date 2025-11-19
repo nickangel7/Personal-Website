@@ -1,4 +1,4 @@
-const particleStar = {
+const particleStar2 = {
   key: 'reactNightSky',
   name: 'React Night Sky',
   interactivity: {
@@ -21,10 +21,10 @@ const particleStar = {
         },
       },
       straight: true,
-      direction: 'bottom-right',
+      direction: 'top-left',
       enable: true,
       outModes: 'out',
-      speed: 0.5,
+      speed: .7,
     },
     collisions: {
       enable: false,
@@ -33,7 +33,7 @@ const particleStar = {
       density: {
         enable: true,
       },
-      value: 300,
+      value: 150,
     },
     opacity: {
       animation: {
@@ -50,10 +50,10 @@ const particleStar = {
       type: 'circle',
     },
     size: {
-      value: 0.5,
+      value: 1.5,
     },
   },
   pauseOnBlur: true,
 };
 
-export default particleStar;
+export default particleStar2;
