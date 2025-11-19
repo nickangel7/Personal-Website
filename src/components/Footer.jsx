@@ -3,6 +3,7 @@ import '../style.css';
 import logo from './assets/linkedinlogo.png';
 import githublogo from './assets/githublogo.png';
 
+
 const Footer = () => {
   return (
     <footer className='footer'>

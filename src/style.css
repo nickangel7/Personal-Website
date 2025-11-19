@@ -1,6 +1,5 @@
 body {
   height: 100%;
-  overflow: hidden;
   background-color: black;
   color: #01f8f4ff;
   margin: 0;
@@ -18,15 +17,15 @@ body {
   flex-direction: row;
   z-index: 10;
   color: #01f8f4ff;
-  padding: 20px 30px;
+  padding-right: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(0.85rem, 2.5vw, 1.5rem);
 }
 
 .logo {
-  width: clamp(10px, 20vw, 190px);
+  width: clamp(5px, 20vw, 190px);
 }
 
 .header nav ul {
@@ -34,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(0.7rem, 2.5vw, 2rem);
   padding: 0;
   margin: 0;
 }
@@ -68,15 +67,17 @@ body {
   padding: 5px 5px;
   margin-right: 1px;
   margin-bottom: 5px;
+  width: clamp(6rem, 1vw, 4rem);
 }
 
 .introduction {
+  overflow: hidden;
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(1rem, 3vw, 5rem);
+  font-size: clamp(2rem, 3vw, 5rem);
 }
 
 .section {
@@ -86,8 +87,34 @@ body {
   flex-direction: column;
 }
 
+.aboutme {
+  justify-self: unset;
+}
+
 .aboutme p {
-  width: 50%;
+  width: 85vw;
+  max-width: 53dvw;
+  min-width: 325px;
+}
+
+.skill-logos {
+  justify-content: center;
+  display: block;
+  padding-bottom: 50px;
+  text-align: center;
+  width: 85dvw;
+  max-width: 60dvw;
+  min-width: 375px;
+}
+
+.skill-logos img {
+  display: inline-block;
+  min-width: 40px;
+}
+
+.icon {
+  padding: 5px 30px;
+  width: clamp(5px, 5vw, 60px);
 }
 
 .introname {
