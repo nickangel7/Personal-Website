@@ -119,6 +119,10 @@ body {
   width: clamp(5px, 5dvw, 60px);
 }
 
+.introname-background {
+  
+}
+
 .introname {
   background-color: #01f8f4ff;
   color: black;
