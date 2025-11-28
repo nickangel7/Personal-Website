@@ -16,6 +16,7 @@ const ParticleBackground = () => {
   return (
     <Particles
       id='tsparticles'
+      className='tsparticles'
       init={particlesInit}
       options={particlesStar}
       style={{

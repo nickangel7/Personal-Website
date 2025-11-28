@@ -10,6 +10,8 @@ const Introduction = () => {
   const container = useRef();
   const bgRef = useRef();
 
+  const isFirstVisit = !sessionStorage.getItem('firstVisitDone');
+
   let tl = gsap.timeline();
 
   useGSAP(() => {
@@ -28,7 +30,30 @@ const Introduction = () => {
         duration: 1.2,
         ease: 'power3.out',
         stagger: 0.1,
+      })
+      .from('.playbutton', {
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out',
+        stagger: 0.1,
       });
+    if (isFirstVisit) {
+      tl.from(
+        'header',
+        {
+          y: -150,
+        },
+        '<'
+      );
+      tl.from(
+        'footer',
+        {
+          y: 150,
+        },
+        '<'
+      );
+      sessionStorage.setItem('firstVisitDone', 'true');
+    }
   });
 
   return (
