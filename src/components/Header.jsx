@@ -5,7 +5,9 @@ import logo from './assets/honeybee.png';
 const Header = () => {
   return (
     <header className='header'>
-      <img src={logo} alt='Logo' className='logo' />
+      <div className='logo-wrapper'>
+        <img src={logo} alt='Logo' className='logo' />
+      </div>
       <nav>
         <ul>
           <li>

@@ -5,10 +5,12 @@ import { useGSAP } from '@gsap/react';
 import '../style.css';
 
 gsap.registerPlugin(useGSAP);
+let isClicked = 'false';
 
 const Introduction = () => {
   const container = useRef();
   const bgRef = useRef();
+  const playButtonRef = useRef();
 
   const isFirstVisit = !sessionStorage.getItem('firstVisitDone');
 
@@ -30,13 +32,15 @@ const Introduction = () => {
         duration: 1.2,
         ease: 'power3.out',
         stagger: 0.1,
-      })
-      .from('.playbutton', {
-        opacity: 0,
+      });
+    if (isClicked == 'false') {
+      tl.to('.playbutton', {
+        opacity: 1,
         duration: 1,
         ease: 'power3.out',
         stagger: 0.1,
       });
+    }
     if (isFirstVisit) {
       tl.from(
         'header',
@@ -55,6 +59,28 @@ const Introduction = () => {
       sessionStorage.setItem('firstVisitDone', 'true');
     }
   });
+
+  const playButtonClick = () => {
+    tl.to('.tsparticles', {
+      opacity: 1,
+      duration: 1,
+    })
+      .to(playButtonRef.current, {
+        opacity: 0,
+        duration: 1,
+      })
+      .to(
+        '.logo',
+        {
+          rotation: -360,
+          duration: 20,
+          repeat: -1,
+          ease: 'none',
+        },
+        '<'
+      );
+    isClicked = 'true';
+  };
 
   return (
     <section className='introduction section'>
@@ -124,7 +150,14 @@ const Introduction = () => {
         </div>
       </div>
       <div className='playbutton'>
-        <img src={playbutton} alt='playbutton' className='playbutton' />
+        <img
+          ref={playButtonRef}
+          src={playbutton}
+          alt='playbutton'
+          className='playbutton'
+          onClick={playButtonClick}
+          onHover=''
+        />
       </div>
     </section>
   );

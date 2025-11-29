@@ -22,12 +22,22 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: clamp(0.75rem, 2.5dvw, 1.5rem);
+  flex-shrink: 0;
 }
 
 .logo {
   width: clamp(5px, 20vw, 110px);
+  display: block;
+  transform: translateZ(0);
+}
+
+.logo-wrapper {
   padding-left: 2rem;
   padding-top: 1rem;
+  display: inline-block;
+  transform: translateZ(0);
+  will-change: transform;
+  flex-shrink: 0;
 }
 
 .header nav ul {
@@ -131,6 +141,8 @@ body {
 
 .playbutton {
   width: clamp(10px, 15dvw, 100px);
+  cursor: pointer;
+  opacity: 0;
 }
 
 .portfolio {
@@ -228,6 +240,56 @@ body {
 
 .arrow {
   transform: translateY(-2px);
+}
+
+.contact-page {
+  background-image: url('./components/assets/joshuatree.png');
+  max-height: 55%;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  max-width: 1000px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  min-height: 70%;
+  z-index: 1;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: #000;
+  box-shadow: 0.25em 0.25em 0.9em #01f8f4, 0.125em 0.125em 0.4em #01f8f4;
+  border-radius: 12px;
+}
+
+.contact-form {
+  transform: tranlate(0px, 0px);
+  opacity: 0.6;
+  max-width: 375px;
+  width: 80%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  backdrop-filter: blur(10px);
+}
+
+.contact-title {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
 }
 
 .tsparticles {
