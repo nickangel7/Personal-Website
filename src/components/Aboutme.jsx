@@ -1,4 +1,6 @@
 import React from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import javascriptlogo from './assets/javascriptlogo.png';
 import typescriptlogo from './assets/typescriptlogo.png';
 import reactlogo from './assets/reactlogo.png';
@@ -14,20 +16,38 @@ import awslogo from './assets/awslogo.png';
 import gitlogo from './assets/gitlogo.png';
 import whitegithublogo from './assets/whitegithublogo.png';
 
+gsap.registerPlugin(useGSAP);
+
 const Aboutme = () => {
+  const tl = gsap.timeline();
+
+  useGSAP(() => {
+    tl.from('.aboutme-intro', {
+      opacity: 0,
+      duration: 2,
+      ease: 'power3.out',
+      stagger: 1,
+    }).from('.icon', {
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      stagger: 0.2,
+    });
+  });
+
   return (
     <div className='aboutme section'>
-      <h1>About me</h1>
-      <p>
+      <h1 className='aboutme-intro'>About me</h1>
+      <p className='aboutme-intro'>
         I am a full stack software engineer living in the Tampa Bay Area. I am
         passionate about creating beautiful products and solutions.
       </p>
-      <p>
+      <p className='aboutme-intro'>
         In a previous life, I worked as an EMT, treating and transporting people
         to the hospital. When I am not coding, you can find me woodworking,
         lifting weights, or hanging out with my family.{' '}
       </p>
-      <h1>Skills</h1>
+      <h1 className='aboutme-intro'>Skills</h1>
       <div className='skill-logos'>
         <img src={javascriptlogo} className='icon'></img>
         <img src={typescriptlogo} className='icon'></img>

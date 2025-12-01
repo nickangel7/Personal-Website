@@ -8,8 +8,7 @@ gsap.registerPlugin(useGSAP);
 let isClicked = 'false';
 
 const Introduction = () => {
-  const container = useRef();
-  const bgRef = useRef();
+  
   const playButtonRef = useRef();
 
   const isFirstVisit = !sessionStorage.getItem('firstVisitDone');

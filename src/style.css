@@ -263,7 +263,6 @@ body {
 
 .contact-form {
   transform: tranlate(0px, 0px);
-  opacity: 0.6;
   max-width: 375px;
   width: 80%;
   padding: 1rem;
@@ -271,8 +270,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: black;
-  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(3px);
+  border-radius: 5%;
 }
 
 .contact-title {
@@ -290,6 +290,21 @@ body {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  padding: 1rem;
+}
+
+.contact-input {
+  width: 90%;
+  padding: 1rem;
+}
+
+.contact-button {
+  background-color: #01f8f4;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  border-radius: 15%;
+  padding: 0.5rem;
 }
 
 .tsparticles {
