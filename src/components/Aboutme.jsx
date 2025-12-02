@@ -1,7 +1,7 @@
 import React from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import javascriptlogo from './assets/javascriptlogo.png';
+import javascriptlogo from './assets/javascriptlogo.webp';
 import typescriptlogo from './assets/typescriptlogo.png';
 import reactlogo from './assets/reactlogo.png';
 import htmllogo from './assets/htmllogo.png';

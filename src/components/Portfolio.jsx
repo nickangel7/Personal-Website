@@ -2,7 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import cachemunklogo from './assets/cachemunklogo.png';
+import cachemunklogo from './assets/cachemunklogo.webp';
 import githublogo from './assets/githublogo.png';
 import npmlogo from './assets/npmlogo.png';
 import typescriptlogo from './assets/typescriptlogo.png';
