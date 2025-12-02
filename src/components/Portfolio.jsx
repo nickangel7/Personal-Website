@@ -10,6 +10,7 @@ import nodelogo from './assets/nodelogo.png';
 import reactlogo from './assets/reactlogo.png';
 import dockerlogo from './assets/dockerlogo.png';
 import awslogo from './assets/awslogo.png';
+import redislogo from './assets/redislogo.png';
 import sqllogo from './assets/sqllogo.png';
 import '../style.css';
 
@@ -37,16 +38,20 @@ const Portfolio = () => {
             Application layer caching middleware library for Node.js and Redis
           </p>
           <div className='git-npm'>
-            <img src={githublogo} className='reference'></img>
-            <img src={npmlogo} className='reference'></img>
+            <a href='https://github.com/oslabs-beta/CacheMunk/blob/5fb97164d77057c8401aa65ebc9bb7c2c5033fee/cachemunk/README.md'>
+              <img src={githublogo} className='reference'></img>
+            </a>
+            <a href='https://www.npmjs.com/package/cachemunk'>
+              <img src={npmlogo} className='reference'></img>
+            </a>
           </div>
           <div className='tech-stack'>
             <h1 className='techstack-made'>Made with:</h1>
             <img src={typescriptlogo} className='techlogo'></img>
-            <img src={nodelogo} className='techlogo'></img>
             <img src={reactlogo} className='techlogo'></img>
             <img src={dockerlogo} className='techlogo'></img>
             <img src={awslogo} className='techlogo'></img>
+            <img src={redislogo} className='techlogo'></img>
             <img src={sqllogo} className='techlogo'></img>
           </div>
         </h1>

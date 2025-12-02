@@ -296,6 +296,7 @@ body {
 .contact-input {
   width: 90%;
   padding: 1rem;
+  font-size: 1rem;
 }
 
 .contact-button {
@@ -312,6 +313,7 @@ body {
 }
 
 .logofooter {
-  width: 30%;
+  width: 70%;
   height: auto;
+  cursor: pointer;
 }
