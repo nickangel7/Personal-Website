@@ -10,7 +10,7 @@ import './style.css';
 
 function Layout() {
   return (
-    <div>
+    <div className='mobile-perfect-zoom min-h-screen bg-background'>
       <Header />
       <Outlet />
       <Footer />

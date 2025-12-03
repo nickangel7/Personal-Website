@@ -12,6 +12,12 @@ body {
   font-style: normal;
 }
 
+@media (max-width: 768px) {
+  html {
+    zoom: 75%;
+  }
+}
+
 .header {
   position: relative;
   flex-direction: row;
